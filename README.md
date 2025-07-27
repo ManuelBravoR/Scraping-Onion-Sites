@@ -33,7 +33,7 @@ Scrapea sitios .onion usando la red Tor, detecta palabras clave específicas (ex
   </tr>
 </table>
 ---
----
+
 ## ⚙️ Requisitos de instalación
 
 ### 🔐 Instalar Tor y dependencias
