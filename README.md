@@ -110,9 +110,10 @@ def enviar_reporte_telegram(path='report.txt'):
 python3 scraping_onion_sites.py identifiers.txt
 ```
 ### 🧩 Automatización con cronjob
+Ejecución cada 6 horas: 6AM, 12PM, 6PM y 12AM
 ```bash
 crontab -e
-0 2 * * * cd /ruta/al/proyecto && /usr/bin/python3 scraping_onion_sites.py identifiers.txt
+0 6,12,18,0 * * * /ruta/a/tu/entorno/venv/bin/python /ruta/completa/a/scraping_onion_sites.py /ruta/completa/a/identifiers.txt
 ```
 ---
 ## 🖥️ Anexos
