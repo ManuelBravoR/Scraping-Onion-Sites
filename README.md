@@ -78,7 +78,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 <div align="center">
   <img src="https://oxylabs.io/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Foxylabs-web%2FZpBvKB5LeNNTxEoc_NWNiMmRiN2MtNzlkNC00OGIxLTg4NGUtZjZlMWY1ZWQ4NmMz_using-python-and-beautiful-soup-to-parse-data-intro-tutorial2x-3.png%3Fauto%3Dformat%2Ccompress&w=1080&q=75" alt="Scraping .onion Sites" width="48%">
 </div>
----
+
 ### 🤖 Envío de reportes con Telegram
 Una vez generado report.txt, puedes enviarlo automáticamente a un canal o grupo de Telegram usando un bot.
 
@@ -114,7 +114,8 @@ python3 scraping_onion_sites.py identifiers.txt
 crontab -e
 0 2 * * * cd /ruta/al/proyecto && /usr/bin/python3 scraping_onion_sites.py identifiers.txt
 ```
-##🖥️ Anexos
+---
+## 🖥️ Anexos
 ### ⚙️ Ficheros Utilizados
 <img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F9c72534f-6a89-4e71-8f66-3443d6ef4184%2Fimage.png/size/w=2000?exp=1753637655&sig=70K5100yjBx-JlykDpV44j23cZe3jSNOLwp-nQm7NVI&id=23d1941a-b0eb-80a8-be93-dad6e25549b2&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Ficheros Utilizados" width="500">
 
