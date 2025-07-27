@@ -54,14 +54,14 @@ pip install requests[socks] beautifulsoup4 requests-tor
 ## ⚙️ Tecnologías utilizadas
 ### 🧱 Tor + SOCKS5 Proxy
 Se uso Tor para enrutar las peticiones a través de la red anónima. Tor expone un proxy local en socks5h://127.0.0.1:9050, que se puede usar para acceder a sitios .onion desde Python.
-🔄 requests_tor
+* 🔄 requests_tor
 ```bash
 rtor = RequestsTor(tor_ports=(9050,), tor_cport=9051, autochange_id=5)
 ```
 Una capa encima de requests que permite:
-✅ Conectar fácilmente usando Tor (SOCKS5)
-✅ Cambiar identidad con autochange_id
-✅ Mantener sesión persistente
+* ✅ Conectar fácilmente usando Tor (SOCKS5)
+* ✅ Cambiar identidad con autochange_id
+* ✅ Mantener sesión persistente
 <div align="center">
   <img src="https://github.com/ManuelBravoR/Resources/blob/main/Torsocks.png" alt="Scraping .onion Sites" width="48%">
 </div>
