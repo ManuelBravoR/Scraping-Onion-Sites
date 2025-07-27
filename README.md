@@ -96,14 +96,35 @@ CHAT_ID = 'TU_CHAT_ID_AQUI'
 ```
 Paso 4: Envía el reporte desde el script
 ```bash
+import asyncio
+from telegram import Bot
 import telegram_config
-import telegram
+import os
 
-def enviar_reporte_telegram(path='report.txt'):
-    bot = telegram.Bot(token=telegram_config.BOT_TOKEN)
-    with open(path, 'r') as f:
-        contenido = f.read()
-    bot.send_message(chat_id=telegram_config.CHAT_ID, text=f"Reporte de scraping:\n\n{contenido}")
+async def send_report_telegram(path='report.txt'):
+    try:        
+        if not os.path.exists(path) or os.path.getsize(path) == 0:
+            print("[!] El archivo no existe o está vacío. No se envió nada.")
+            return
+        
+        with open(path, 'r') as f:
+            contenido = f.read()
+
+        bot = Bot(token=telegram_config.BOT_TOKEN)
+
+        max_length = 4000
+        partes = [contenido[i:i+max_length] for i in range(0, len(contenido), max_length)]
+
+        for parte in partes:
+            await bot.send_message(chat_id=telegram_config.CHAT_ID, text=parte)
+
+        print("[✓] Reporte enviado por Telegram.")
+
+    except Exception as e:
+        print(f"[!] Error al enviar el reporte: {e}")
+
+if __name__ == "__main__":
+    asyncio.run(send_report_telegram())
 ```
 <table align="center" width="100%">
   <tr>
