@@ -116,5 +116,5 @@ crontab -e
 <img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F7ced8ecb-542a-406d-8a0b-79d559c28ec1%2Fresults.png/size/w=2000?exp=1753637585&sig=zInjM_ikgeByeHU3XqIJfYi2tTSlxoJWvTTKG39oTQI&id=23d1941a-b0eb-8035-ac27-dbde0ae7eed3&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Ficheros Utilizados" width="500">
 
 * `report.txt`: Contiene los identifiers a buscar en los onion sites y las URLs donde estas fueron identificadas.
-* `report.txt`: Ayuda a los analista de seguridad de la información en la identificación temprana de amenazas.
+* `report.txt`: Contiene los resultados del escaneo, detallando la información sensible o las coincidencias encontradas según los identificadores definidos. Ayuda a los analistas de seguridad de la información en la identificación temprana de posibles amenazas o exposición de datos (nombre de empresas, personas, entidades, usuarios, etc).
 
