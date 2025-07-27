@@ -4,6 +4,10 @@ import time
 import random
 from requests_tor import RequestsTor
 from bs4 import BeautifulSoup
+import asyncio
+from telegram import Bot
+import telegram_config
+import os
 
 # Configuraciones
 MAX_DEPTH = 2
@@ -95,6 +99,33 @@ def scrape(url, depth, keywords, visited, report):
         if ".onion" in link:
             scrape(link, depth + 1, keywords, visited, report)
 
+#Enviar el reporte a Telegram automáticamente
+async def send_report_telegram(path='report.txt'):
+    try:
+        # Verificar que el archivo existe y no está vacío
+        if not os.path.exists(path) or os.path.getsize(path) == 0:
+            print("[!] El archivo no existe o está vacío. No se envió nada.")
+            return
+
+        # Leer el contenido
+        with open(path, 'r') as f:
+            contenido = f.read()
+
+        # Crear instancia del bot
+        bot = Bot(token=telegram_config.BOT_TOKEN)
+
+        # Dividir el contenido en bloques de 4000 caracteres si es muy largo
+        max_length = 4000
+        partes = [contenido[i:i+max_length] for i in range(0, len(contenido), max_length)]
+
+        for parte in partes:
+            await bot.send_message(chat_id=telegram_config.CHAT_ID, text=parte)
+
+        print("[✓] Reporte enviado por Telegram.")
+
+    except Exception as e:
+        print(f"[!] Error al enviar el reporte: {e}")
+
 # ======================= MAIN =======================
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -112,3 +143,6 @@ if __name__ == "__main__":
         scrape(seed_url, 0, keywords, visited, "report.txt")
 
     print("\n[✔] Análisis completado. Revisa report.txt")
+    asyncio.run(send_report_telegram())
+    print("\n[✔] Reporte enviado a Telegram")
+
