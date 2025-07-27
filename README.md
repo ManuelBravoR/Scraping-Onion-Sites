@@ -50,6 +50,7 @@ sudo apt install python3-venv tor -y
 python3 -m venv venv
 source venv/bin/activate
 pip install requests[socks] beautifulsoup4 requests-tor
+pip install python-telegram-bot
 ```
 ## ⚙️ Tecnologías utilizadas
 ### 🧱 Tor + SOCKS5 Proxy
