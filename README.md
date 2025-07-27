@@ -52,7 +52,7 @@ source venv/bin/activate
 pip install requests[socks] beautifulsoup4 requests-tor
 ```
 ## ⚙️ Tecnologías utilizadas
-###🧱 Tor + SOCKS5 Proxy
+🧱 Tor + SOCKS5 Proxy
 Se uso Tor para enrutar las peticiones a través de la red anónima. Tor expone un proxy local en socks5h://127.0.0.1:9050, que se puede usar para acceder a sitios .onion desde Python.
 🔄 requests_tor
 ```bash
