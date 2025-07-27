@@ -39,6 +39,13 @@ Scrapea sitios .onion usando la red Tor, detecta palabras clave específicas (ex
 ### 🔐 Instalar Tor y dependencias
 ```bash
 sudo apt update
+
+sudo apt install tor torsocks -y
+
+sudo systemctl start tor
+sudo systemctl enable tor
+sudo systemctl status tor
+
 sudo apt install python3-venv tor -y
 python3 -m venv venv
 source venv/bin/activate
