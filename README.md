@@ -66,7 +66,7 @@ Una capa encima de requests que permite:
   <img src="https://github.com/ManuelBravoR/Resources/blob/main/Torsocks.png" alt="Scraping .onion Sites" width="48%">
 </div>
 
-🥣 BeautifulSoup
+### 🥣 BeautifulSoup
 Utilizado para parsear el contenido HTML, buscar enlaces y extraer texto limpio de cualquier etiqueta HTML.
 ```bash
 soup = BeautifulSoup(response.text, 'html.parser')
@@ -78,7 +78,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 <div align="center">
   <img src="https://oxylabs.io/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Foxylabs-web%2FZpBvKB5LeNNTxEoc_NWNiMmRiN2MtNzlkNC00OGIxLTg4NGUtZjZlMWY1ZWQ4NmMz_using-python-and-beautiful-soup-to-parse-data-intro-tutorial2x-3.png%3Fauto%3Dformat%2Ccompress&w=1080&q=75" alt="Scraping .onion Sites" width="48%">
 </div>
-🤖 Envío de reportes con Telegram
+### 🤖 Envío de reportes con Telegram
 Una vez generado report.txt, puedes enviarlo automáticamente a un canal o grupo de Telegram usando un bot.
 
 Paso 1: Crea un bot con @BotFather
@@ -104,24 +104,24 @@ def enviar_reporte_telegram(path='report.txt'):
         contenido = f.read()
     bot.send_message(chat_id=telegram_config.CHAT_ID, text=f"Reporte de scraping:\n\n{contenido}")
 ```
-🖥️ Ejecución
+### 🖥️ Ejecución
 ```bash
 python3 scraping_onion_sites.py identifiers.txt
 ```
-🧩 Automatización con cronjob
+### 🧩 Automatización con cronjob
 ```bash
 crontab -e
 0 2 * * * cd /ruta/al/proyecto && /usr/bin/python3 scraping_onion_sites.py identifiers.txt
 ```
-###🖥️ Anexos
-⚙️ Ficheros Utilizados
+##🖥️ Anexos
+### ⚙️ Ficheros Utilizados
 <img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F9c72534f-6a89-4e71-8f66-3443d6ef4184%2Fimage.png/size/w=2000?exp=1753637655&sig=70K5100yjBx-JlykDpV44j23cZe3jSNOLwp-nQm7NVI&id=23d1941a-b0eb-80a8-be93-dad6e25549b2&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Ficheros Utilizados" width="500">
 
 * `seed.txt`: Contiene las URLs de los sitios `.onion` semilla para iniciar la exploración.
 * `identifiers.txt`: Define las palabras clave a buscar dentro de los sitios `.onion` (posible exposición de información).
 * `torsocks`: Indica el uso de `torsocks` para asegurar que el tráfico se enruta a través de la red Tor, cambiando la IP pública a una IP de Tor.
 
-⚙️ Reporte output
+### ⚙️ Reporte output
 <img src="https://github.com/ManuelBravoR/Resources/blob/main/results.png" alt="Ficheros Utilizados" width="500">
 
 * `report.txt`: Contiene los identifiers a buscar en los onion sites y las URLs donde estas fueron identificadas.
