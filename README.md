@@ -5,6 +5,8 @@ Scrapea sitios .onion usando la red Tor, detecta palabras clave específicas (ex
   <img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F0ed9a6a2-3061-4df0-85a5-f670e04467ab%2Fimage.png/size/w=2000?exp=1753628919&sig=54LTeC7dDVsXCpSqP1oUhDj4tzoVYcHfz9IC63n8ZKk&id=23b1941a-b0eb-804c-a782-e3f3e2a71f75&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Scraping .onion Sites" width="48%">
 </div>
 
+[Running scraping onion sites](https://www.youtube.com/watch?v=_pz2VE_hWFA)
+
 # 🧅 Dark Web Keyword Scanner (TOR .onion Scraper)
 **Scrapea sitios .onion usando la red Tor, detecta palabras clave específicas y genera reportes automáticos.**
 
