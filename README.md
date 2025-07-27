@@ -2,7 +2,7 @@
 Scrapea sitios .onion usando la red Tor, detecta palabras clave específicas (exposión de información) y genera reportes a telegram.
 
 <div align="center">
-  <img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F0ed9a6a2-3061-4df0-85a5-f670e04467ab%2Fimage.png/size/w=2000?exp=1753639029&sig=YaaA2W52Ceha_ngC5x9BCjCcsEfz_MsftMY8VgCi3Iw&id=23b1941a-b0eb-804c-a782-e3f3e2a71f75&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Scraping .onion Sites" width="48%">
+  <img src="https://github.com/ManuelBravoR/Resources/blob/main/Screenshot%202025-07-24%20214536.png" alt="Scraping .onion Sites" width="48%">
 </div>
 
 [Running scraping onion sites](https://www.youtube.com/watch?v=_pz2VE_hWFA)
@@ -28,7 +28,7 @@ Scrapea sitios .onion usando la red Tor, detecta palabras clave específicas (ex
       </ul>
     </td>
     <td width="40%" valign="top" align="center">
-      <img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F6cb7da08-c23a-4f5f-bc4a-aaacaff0a41f%2FL4CK_73x0wx4.png/size/w=2000?exp=1753629444&sig=UmaInv3_q76gZNSlq-l2DGf7y7OhHKCYozP_AUmyAmM&id=23d1941a-b0eb-801b-a32a-f8fbd961faf5&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Scraping .onion Sites" width="300px">
+      <img src="https://github.com/ManuelBravoR/Resources/blob/main/L4CK_73x0wx4%20(2).png" alt="Scraping .onion Sites" width="300px">
     </td>
   </tr>
 </table>
@@ -56,7 +56,7 @@ Una capa encima de requests que permite:
 ✅ Cambiar identidad con autochange_id
 ✅ Mantener sesión persistente
 <div align="center">
-  <img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F249a45d1-6113-4d24-af30-6b780ae0cdcd%2FTorsocks.png/size/w=2000?exp=1753631754&sig=NnRhYCL93BtN5XuWs80-rec7uwYfG_jGVDJPgANTf7g&id=23d1941a-b0eb-800b-8d0c-ff0fe86ca548&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Scraping .onion Sites" width="48%">
+  <img src="https://github.com/ManuelBravoR/Resources/blob/main/Torsocks.png" alt="Scraping .onion Sites" width="48%">
 </div>
 
 ###🥣 BeautifulSoup
@@ -115,7 +115,7 @@ crontab -e
 * `torsocks`: Indica el uso de `torsocks` para asegurar que el tráfico se enruta a través de la red Tor, cambiando la IP pública a una IP de Tor.
 
 ## ⚙️ Reporte output
-<img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F7ced8ecb-542a-406d-8a0b-79d559c28ec1%2Fresults.png/size/w=2000?exp=1753637585&sig=zInjM_ikgeByeHU3XqIJfYi2tTSlxoJWvTTKG39oTQI&id=23d1941a-b0eb-8035-ac27-dbde0ae7eed3&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Ficheros Utilizados" width="500">
+<img src="https://github.com/ManuelBravoR/Resources/blob/main/results.png" alt="Ficheros Utilizados" width="500">
 
 * `report.txt`: Contiene los identifiers a buscar en los onion sites y las URLs donde estas fueron identificadas.
 * `report.txt`: Contiene los resultados del escaneo, detallando la información sensible o las coincidencias encontradas según los identificadores definidos. Ayuda a los analistas de seguridad de la información en la identificación temprana de posibles amenazas o exposición de datos (nombre de empresas, personas, entidades, usuarios, etc).
