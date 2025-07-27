@@ -105,6 +105,21 @@ def enviar_reporte_telegram(path='report.txt'):
         contenido = f.read()
     bot.send_message(chat_id=telegram_config.CHAT_ID, text=f"Reporte de scraping:\n\n{contenido}")
 ```
+<table align="center" width="100%">
+  <tr>
+    <td align="center" width="50%" valign="top">
+      <h4>Configuración del Bot de Telegram</h4>
+      <img src="https://github.com/ManuelBravoR/Resources/blob/main/bot%20telegram.png" alt="Configuración de Bot de Telegram" width="auto" height="300">
+      <p>Muestra los pasos y el reporte</p>
+    </td>
+    <td align="center" width="50%" valign="top">
+      <h4>Ejemplo de Reporte en Telegram</h4>
+      <img src="https://github.com/ManuelBravoR/Resources/blob/main/telegram%20report.png" alt="Reporte Enviado a Telegram" width="auto" height="300">
+      <p>Script para enviar report.txt a Telegram.</p>
+    </td>
+  </tr>
+</table>
+
 ### 🖥️ Ejecución
 ```bash
 python3 scraping_onion_sites.py identifiers.txt
