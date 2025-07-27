@@ -106,10 +106,14 @@ crontab -e
 ```
 ###🖥️ Anexos
 ## ⚙️ Ficheros Utilizados
+<img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F9c72534f-6a89-4e71-8f66-3443d6ef4184%2Fimage.png/size/w=2000?exp=1753637655&sig=70K5100yjBx-JlykDpV44j23cZe3jSNOLwp-nQm7NVI&id=23d1941a-b0eb-80a8-be93-dad6e25549b2&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Ficheros Utilizados" width="500">
 
-Aquí se muestra una descripción de los ficheros utilizados por la herramienta:
+* `seed.txt`: Contiene las URLs de los sitios `.onion` semilla para iniciar la exploración.
+* `identifiers.txt`: Define las palabras clave a buscar dentro de los sitios `.onion` (posible exposición de información).
+* `torsocks`: Indica el uso de `torsocks` para asegurar que el tráfico se enruta a través de la red Tor, cambiando la IP pública a una IP de Tor.
 
-<img src="assets/ficheros_utilizados.png" alt="Ficheros Utilizados" width="500">
+## ⚙️ Reporte output
+<img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F7ced8ecb-542a-406d-8a0b-79d559c28ec1%2Fresults.png/size/w=2000?exp=1753637585&sig=zInjM_ikgeByeHU3XqIJfYi2tTSlxoJWvTTKG39oTQI&id=23d1941a-b0eb-8035-ac27-dbde0ae7eed3&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Ficheros Utilizados" width="500">
 
 * `seed.txt`: Contiene las URLs de los sitios `.onion` semilla para iniciar la exploración.
 * `identifiers.txt`: Define las palabras clave a buscar dentro de los sitios `.onion` (posible exposición de información).
