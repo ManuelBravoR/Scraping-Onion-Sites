@@ -31,23 +31,74 @@ Scrapea sitios .onion usando la red Tor, detecta palabras clave específicas (ex
   </tr>
 </table>
 ---
-
-## 📁 Estructura del proyecto
-
 ---
-
-## 📁 Estructura del proyecto
-
-
----
-
 ## ⚙️ Requisitos de instalación
 
-### 🔐 Paso 1: Instalar Tor y dependencias
+### 🔐 Instalar Tor y dependencias
 ```bash
 sudo apt update
 sudo apt install python3-venv tor -y
 python3 -m venv venv
 source venv/bin/activate
 pip install requests[socks] beautifulsoup4 requests-tor
+```
+## ⚙️ Tecnologías utilizadas
+###🧱 Tor + SOCKS5 Proxy
+Se uso Tor para enrutar las peticiones a través de la red anónima. Tor expone un proxy local en socks5h://127.0.0.1:9050, que se puede usar para acceder a sitios .onion desde Python.
+🔄 requests_tor
+```bash
+rtor = RequestsTor(tor_ports=(9050,), tor_cport=9051, autochange_id=5)
+```
+Una capa encima de requests que permite:
+✅ Conectar fácilmente usando Tor (SOCKS5)
+✅ Cambiar identidad con autochange_id
+✅ Mantener sesión persistente
+<div align="center">
+  <img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fd92e52cd-8fc3-4a5d-997a-84ba8502467d%2F249a45d1-6113-4d24-af30-6b780ae0cdcd%2FTorsocks.png/size/w=2000?exp=1753631754&sig=NnRhYCL93BtN5XuWs80-rec7uwYfG_jGVDJPgANTf7g&id=23d1941a-b0eb-800b-8d0c-ff0fe86ca548&table=block&userId=51cd8123-09b0-4ad7-96c9-8485f0494bf3" alt="Scraping .onion Sites" width="48%">
+</div>
 
+###🥣 BeautifulSoup
+Utilizado para parsear el contenido HTML, buscar enlaces y extraer texto limpio de cualquier etiqueta HTML.
+```bash
+soup = BeautifulSoup(response.text, 'html.parser')
+```
+<p>
+  Referencia Beautiful Soup:
+  <a href="https://github.com/oxylabs/web-scraping-data-parsing-beautiful-soup">Oxylabs: Web Scraping con Beautiful Soup</a>.
+</p>
+
+###🤖 Envío de reportes con Telegram
+Una vez generado report.txt, puedes enviarlo automáticamente a un canal o grupo de Telegram usando un bot.
+
+Paso 1: Crea un bot con @BotFather
+Obtén tu token de bot.
+
+Paso 2: Obtén tu chat ID
+Puedes usar bots como @userinfobot o leerlo desde la API.
+
+Paso 3: Configura telegram_config.py
+```bash
+# telegram_config.py
+BOT_TOKEN = 'TU_TOKEN_AQUI'
+CHAT_ID = 'TU_CHAT_ID_AQUI'
+```
+Paso 4: Envía el reporte desde el script
+```bash
+import telegram_config
+import telegram
+
+def enviar_reporte_telegram(path='report.txt'):
+    bot = telegram.Bot(token=telegram_config.BOT_TOKEN)
+    with open(path, 'r') as f:
+        contenido = f.read()
+    bot.send_message(chat_id=telegram_config.CHAT_ID, text=f"Reporte de scraping:\n\n{contenido}")
+```
+###🖥️ Ejecución
+```bash
+python3 scraping_onion_sites.py identifiers.txt
+```
+###🧩 Automatización con cronjob
+```bash
+crontab -e
+0 2 * * * cd /ruta/al/proyecto && /usr/bin/python3 scraping_onion_sites.py identifiers.txt
+```
