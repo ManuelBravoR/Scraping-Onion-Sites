@@ -66,7 +66,9 @@ soup = BeautifulSoup(response.text, 'html.parser')
   Referencia Beautiful Soup:
   <a href="https://github.com/oxylabs/web-scraping-data-parsing-beautiful-soup">Oxylabs: Web Scraping con Beautiful Soup</a>.
 </p>
-
+<div align="center">
+  <img src="https://oxylabs.io/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Foxylabs-web%2FZpBvKB5LeNNTxEoc_NWNiMmRiN2MtNzlkNC00OGIxLTg4NGUtZjZlMWY1ZWQ4NmMz_using-python-and-beautiful-soup-to-parse-data-intro-tutorial2x-3.png%3Fauto%3Dformat%2Ccompress&w=1080&q=75" alt="Scraping .onion Sites" width="48%">
+</div>
 ###🤖 Envío de reportes con Telegram
 Una vez generado report.txt, puedes enviarlo automáticamente a un canal o grupo de Telegram usando un bot.
 
@@ -102,3 +104,14 @@ python3 scraping_onion_sites.py identifiers.txt
 crontab -e
 0 2 * * * cd /ruta/al/proyecto && /usr/bin/python3 scraping_onion_sites.py identifiers.txt
 ```
+###🖥️ Anexos
+## ⚙️ Ficheros Utilizados
+
+Aquí se muestra una descripción de los ficheros utilizados por la herramienta:
+
+<img src="assets/ficheros_utilizados.png" alt="Ficheros Utilizados" width="500">
+
+* `seed.txt`: Contiene las URLs de los sitios `.onion` semilla para iniciar la exploración.
+* `identifiers.txt`: Define las palabras clave a buscar dentro de los sitios `.onion` (posible exposición de información).
+* `torsocks`: Indica el uso de `torsocks` para asegurar que el tráfico se enruta a través de la red Tor, cambiando la IP pública a una IP de Tor.
+
