@@ -78,7 +78,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 <div align="center">
   <img src="https://oxylabs.io/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Foxylabs-web%2FZpBvKB5LeNNTxEoc_NWNiMmRiN2MtNzlkNC00OGIxLTg4NGUtZjZlMWY1ZWQ4NmMz_using-python-and-beautiful-soup-to-parse-data-intro-tutorial2x-3.png%3Fauto%3Dformat%2Ccompress&w=1080&q=75" alt="Scraping .onion Sites" width="48%">
 </div>
-
+---
 ### 🤖 Envío de reportes con Telegram
 Una vez generado report.txt, puedes enviarlo automáticamente a un canal o grupo de Telegram usando un bot.
 
